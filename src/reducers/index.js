@@ -4,6 +4,5 @@ import alertReducer from './alertReducer';
 
 export default combineReducers({
     items: itemsReducers,
-    alerta: alertReducer
-
+    alert: alertReducer
 })
