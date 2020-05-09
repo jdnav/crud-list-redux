@@ -122,13 +122,13 @@ const deleteItemError = () => ({
 });
 
 // set item in edition
-export function getItemEditar(item) {
+export function getItemEditAction(item) {
   return (dispatch) => {
-    dispatch(getItemEditAction(item));
+    dispatch(getItemEdit(item));
   };
 }
 
-const getItemEditAction = (item) => ({
+const getItemEdit = (item) => ({
   type: GET_ITEM_EDIT,
   payload: item,
 });
