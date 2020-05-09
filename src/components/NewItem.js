@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createNewItemAction } from "../actions/itemActions";
 import { showAlert, hideAlertAction } from "../actions/alertActions";
 
-function NewItem(props) {
+function NewItem({history}) {
   // Component STATE
   const [name, saveName] = useState("");
   const [price, savePrice] = useState(0);
@@ -46,7 +46,7 @@ function NewItem(props) {
     });
 
     // redirect
-    // history.push("/");
+    history.push("/");
   };
 
   return (

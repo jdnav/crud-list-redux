@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Provider store={store}>
         <Header />
-        <div className="container">
+        <div className="container mt-5">
           <Switch>
             <Route exact path="/" component={Items} />
             <Route exact path="/items/new" component={NewItem} />
