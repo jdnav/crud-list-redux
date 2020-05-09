@@ -28,14 +28,14 @@ export function createNewItemAction(item) {
       // update state
       dispatch(addItemSuccess(item));
 
-      // Alert
+      // Alert success popup
       Swal.fire("Correct", "Item added correctly", "success");
     } catch (error) {
       console.log(error);
       // if error, change state
       dispatch(addItemError(true));
 
-      // alert
+      // Alert error popup
       Swal.fire({
         icon: "error",
         title: "There was an error",

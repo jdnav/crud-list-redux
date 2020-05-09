@@ -9,7 +9,6 @@ import {
     ITEM_DELETE_SUCCESS,
     ITEM_DELETE_ERROR,
     GET_ITEM_EDIT,
-    START_EDICION_ITEM,
     ITEM_EDITED_SUCCESS,
     ITEM_EDITED_ERROR,
   } from "../types";

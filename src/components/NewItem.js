@@ -46,7 +46,7 @@ function NewItem(props) {
     });
 
     // redirect
-    history.push("/");
+    // history.push("/");
   };
 
   return (
@@ -55,6 +55,8 @@ function NewItem(props) {
         <div className="card">
           <div className="card-body">
             <h2 className="text-center mb-4 font-weight-bold">Add Item</h2>
+
+            {alert ? <p className={alert.classes}> {alert.msg} </p> : null}
 
             <form onSubmit={submitNewItem}>
               <div className="form-group">
@@ -88,6 +90,15 @@ function NewItem(props) {
                 Add Item
               </button>
             </form>
+
+            {loading ? <p>Loading...</p> : null}
+
+            {error ? (
+              <p className="alert alert-danger p2 mt-4 text-center">
+                There was an error
+              </p>
+            ) : null}
+
           </div>
         </div>
       </div>
