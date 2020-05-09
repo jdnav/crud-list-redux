@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+// Actions
+import { createNewItemAction } from "../actions/itemActions";
+import { showAlert, hideAlertAction } from "../actions/alertActions";
 
 function NewItem(props) {
+  // Component STATE
+  const [name, saveName] = useState("");
+  const [price, savePrice] = useState(0);
+
+  // UseDispatch to create a function
+  const dispatch = useDispatch();
+
+  // Access to the state of store
+  const loading = useSelector((state) => state.items.loading);
+  const error = useSelector((state) => state.items.error);
+  const alert = useSelector((state) => state.alert.alert);
+
+  // mandar llamar el action de productoAction
+  const addItem = (item) => dispatch(createNewItemAction(item));
 
   // Submit form
   const submitNewItem = (e) => {
     e.preventDefault();
 
+    // validate form
+    if (name.trim() === "" || price <= 0) {
+      const alert = {
+        msg: "All fields are required",
+        classes: "alert alert-danger text-center text-uppercase p3",
+      };
+      dispatch(showAlert(alert));
+
+      return;
+    }
+
+    // if no errors
+    dispatch(hideAlertAction());
+
+    // create new item
+    addItem({
+      name,
+      price,
+    });
+
+    // redirect
+    history.push("/");
   };
 
   return (
@@ -23,6 +64,8 @@ function NewItem(props) {
                   className="form-control"
                   placeholder="Name Item"
                   name="name"
+                  value={name}
+                  onChange={(e) => saveName(e.target.value)}
                 />
               </div>
 
@@ -33,6 +76,8 @@ function NewItem(props) {
                   className="form-control"
                   placeholder="Price of the item"
                   name="price"
+                  value={price}
+                  onChange={(e) => savePrice(Number(e.target.value))}
                 />
               </div>
 
