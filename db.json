@@ -1,19 +1,19 @@
 {
-    "items": [
-      {
-        "name": "Rib Eye",
-        "price": "500",
-        "id": 7
-      },
-      {
-        "name": "Jugo de Limón",
-        "price": 100,
-        "id": 9
-      },
-      {
-        "name": "1",
-        "price": 2,
-        "id": 10
-      }
-    ]
-  }
+  "items": [
+    {
+      "name": "iPhone 11",
+      "price": "950",
+      "id": 1
+    },
+    {
+      "name": "Samsung Galaxy S20",
+      "price": 1200,
+      "id": 2
+    },
+    {
+      "name": "Xiaomi Redmi Note 8 Pro",
+      "price": 350,
+      "id": 3
+    }
+  ]
+}
