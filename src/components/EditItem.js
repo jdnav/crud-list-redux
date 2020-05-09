@@ -7,21 +7,21 @@ const EditItem = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  // nuevo state de item
+  // useState hook
   const [item, saveItem] = useState({
     name: "",
     price: "",
   });
 
-  // item a editar
+  // Item to edit
   const itemEdit = useSelector((state) => state.items.itemEdit);
 
-  // llenar el state automaticamente
+  // fill out state automatically 
   useEffect(() => {
     saveItem(itemEdit);
   }, [itemEdit]);
 
-  // Leer los datos del formulario
+  // Read form fields
   const onChangeForm = (e) => {
     saveItem({
       ...item,

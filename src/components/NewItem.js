@@ -18,7 +18,7 @@ function NewItem({history}) {
   const error = useSelector((state) => state.items.error);
   const alert = useSelector((state) => state.alert.alert);
 
-  // mandar llamar el action de productoAction
+  // add item action
   const addItem = (item) => dispatch(createNewItemAction(item));
 
   // Submit form

@@ -9,13 +9,13 @@ const Items = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {    
-    // Consultar la api
+    // Get items
     const getItems = () => dispatch(getItemsAction());
     getItems();
     // eslint-disable-next-line
   }, []);
 
-  // obtener el state
+  // selectors to get slices of state
   const items = useSelector((state) => state.items.items);
   const error = useSelector((state) => state.items.error);
   const loading = useSelector((state) => state.items.loading);

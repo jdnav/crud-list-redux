@@ -10,11 +10,10 @@ const Item = ({ item }) => {
   const { name, price } = item;
 
   const dispatch = useDispatch();
-  const history = useHistory(); // habilitar history para redirección
+  const history = useHistory(); // Allow history for redirecting
 
-  // Confirmar si desea eliminarlo
+  // Confirm delete dialog
   const confirmDeleteItem = (item) => {
-    // preguntar al usuario
     Swal.fire({
       title: "Are you sure?",
       text: "The item will no longer be available",
@@ -26,13 +25,13 @@ const Item = ({ item }) => {
       cancelButtonText: "Cancel",
     }).then((result) => {
       if (result.value) {
-        // pasarlo al action
+        // delete item
         dispatch(deleteItemAction(item.id));
       }
     });
   };
 
-  // función que redirige de forma programada
+  // Redirect to edit panel
   const redirectEdition = (item) => {
     dispatch(getItemEditAction(item));
     history.push(`/items/edit/${item.id}`);
