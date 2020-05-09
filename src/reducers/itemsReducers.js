@@ -60,7 +60,7 @@ export default function(state = initialState, action) {
         case ITEM_DELETE_SUCCESS:
             return {
                 ...state,
-                items: state.items.filter( producto => producto.id !== state.itemDelete ),
+                items: state.items.filter( item => item.id !== state.itemDelete ),
                 itemDelete: null
             }
         case  GET_ITEM_EDIT:
@@ -72,8 +72,8 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 itemEdit: null,
-                items: state.items.map( producto => 
-                    producto.id === action.payload.id ? producto = action.payload : producto
+                items: state.items.map( item => 
+                    item.id === action.payload.id ? item = action.payload : item
                 )
             }
         default:

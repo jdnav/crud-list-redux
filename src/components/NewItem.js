@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 // Actions
-import { createNewItemAction } from "../actions/itemActions";
+import { createNewItemAction, getItemsAction } from "../actions/itemActions";
 import { showAlert, hideAlertAction } from "../actions/alertActions";
 
 function NewItem({history}) {
@@ -45,7 +45,10 @@ function NewItem({history}) {
       price,
     });
 
-    // redirect
+    // Get all data after new item added
+    dispatch(getItemsAction());
+
+    // redirect to list route
     history.push("/");
   };
 

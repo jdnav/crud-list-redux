@@ -17,7 +17,7 @@ h1 a.text-light:hover {
   color: white!important;
   text-decoration: none!important;
 }
-.nuevo-post{
+.new-post{
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -38,14 +38,14 @@ h1 a.text-light:hover {
       flex: 0 1 auto;
     }
 }
-.acciones {
+.actions {
   margin: 1rem 0;
 }
 @media (min-width:768px) {
-  .acciones{
+  .actions{
     margin: 0;
   }
 }
-.acciones > *{
+.actions > *{
   flex: 1;
 }

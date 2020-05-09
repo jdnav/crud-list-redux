@@ -1,19 +1,24 @@
 {
   "items": [
     {
-      "name": "iPhone 11",
-      "price": "950",
+      "name": "Apple iPhone 11 Pro Max 256GB",
+      "price": "1300.99",
       "id": 1
     },
     {
-      "name": "Samsung Galaxy S20",
-      "price": 1200,
+      "name": "Samsung Galaxy S20 Ultra 5G",
+      "price": "1359.00",
       "id": 2
     },
     {
-      "name": "Xiaomi Redmi Note 8 Pro",
-      "price": 350,
+      "name": "HUAWEI P30 Pro Quad Camera",
+      "price": "349.99",
       "id": 3
+    },
+    {
+      "name": "Xiaomi Redmi Note 8 Pro",
+      "price": "350.00",
+      "id": 4
     }
   ]
 }

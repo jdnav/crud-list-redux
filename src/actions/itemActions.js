@@ -16,6 +16,7 @@ import {
 import clientAxios from "../config/axios";
 import Swal from "sweetalert2";
 
+// ********** ADD ITEM ACTION **********
 // Create new Item
 export function createNewItemAction(item) {
   return async (dispatch) => {
@@ -57,19 +58,20 @@ const addItemSuccess = (item) => ({
 });
 
 // there was an error
-const addItemError = (estado) => ({
+const addItemError = (state) => ({
   type: ADD_ITEM_ERROR,
-  payload: estado,
+  payload: state,
 });
 
+// ***** GET ITEMS ACTION *****
 // It gets all items from db
 export function getItemsAction() {
   return async (dispatch) => {
     dispatch(getItems());
 
     try {
-      const respuesta = await clientAxios.get("/items");
-      dispatch(downloadItemsSuccess(respuesta.data));
+      const response = await clientAxios.get("/items");
+      dispatch(downloadItemsSuccess(response.data));
     } catch (error) {
       console.log(error);
       dispatch(downloadItemsError());
@@ -91,6 +93,7 @@ const downloadItemsError = () => ({
   payload: true,
 });
 
+// ********** DELETE ACTION **********
 // Select and delete the item
 export function deleteItemAction(id) {
   return async (dispatch) => {
@@ -121,6 +124,7 @@ const deleteItemError = () => ({
   payload: true,
 });
 
+// ********** GET ITEM TO EDIT ACTION **********
 // set item in edition
 export function getItemEditAction(item) {
   return (dispatch) => {
@@ -133,6 +137,7 @@ const getItemEdit = (item) => ({
   payload: item,
 });
 
+// ********** EDIT ACTION **********
 // Edita un registro en la api y state
 export function editItemAction(item) {
   return async (dispatch) => {
