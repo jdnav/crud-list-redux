@@ -2,6 +2,20 @@
 
 This project shows how to create a `CRUD` list in React using `Redux`, `REST API` and `Axios`.
 
+## Screenshots
+### List of items
+![layout](https://user-images.githubusercontent.com/36519737/87184506-691e0e00-c2e8-11ea-9ba7-9c8b6910b978.JPG)
+
+### Add item
+![addItem](https://user-images.githubusercontent.com/36519737/87184510-6c18fe80-c2e8-11ea-9810-4b086ae2c1c4.JPG)
+
+### Edit item
+![editItem](https://user-images.githubusercontent.com/36519737/87184508-6ae7d180-c2e8-11ea-9cd8-9bea38794a57.JPG)
+
+### Delete item
+![deleteItem](https://user-images.githubusercontent.com/36519737/87184511-6d4a2b80-c2e8-11ea-8d9e-6c21811b4ab2.JPG)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
